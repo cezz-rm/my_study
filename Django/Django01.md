@@ -58,9 +58,9 @@ views.py: 写处理业务逻辑的地方<br>
 **wsgi.py：**定义WSGI接口信息，通常本文件生成后无需改动
 #### 2.settings.py文件配置
 1. 设置语言为中文<br>
-**LANGUAGE_CODE = 'zh-hans'** 表示中文
+**LANGUAGE_CODE = 'zh-hans'** 表示中文<br>
 **LANGUAGE_CODE = 'en-us'** 表示英文
 2. 设置时区<br>
 UTC：世界标准时间，也就是平常说的零时区。
-北京时间表示东八区时间，即UTC+8
+北京时间表示东八区时间，即UTC+8<br>
 **TIME_ZONE = 'Asia/Shanghai'**
