@@ -48,7 +48,7 @@
 
 ### 5.迁移数据库
 - 生成迁移文件 python manage.py makemigrations
-- 执行迁移生成数据库 django_migrations
+- 执行迁移生成数据库 python manage.py migrate
 >> 注意：如果提示no changes detected, 可以将数据库中的表django_migrations中为appname的字段
 
 ### 6.ORM
