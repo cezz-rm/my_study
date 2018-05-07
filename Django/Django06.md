@@ -163,6 +163,7 @@ url的配置和页面解析与上面的相差不多，主要区别在于方法�
 	MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 在工程目录下的urls.py文件加入信息：
     
+	from django.contrib.staticfiles.urls import static
 	from day05_1 import settings
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ### 3.定义模型
