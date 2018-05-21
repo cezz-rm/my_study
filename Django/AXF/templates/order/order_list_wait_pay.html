@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <h3 style="font-size: 50px">待付款订单列表</h3>
+    <ul>
+        <!--订单信息展示-->
+        {% for order in orders %}
+            <li>
+                <a href="{% url 'axf:payOrder' order.id %}">
+                    <p style="font-size: 40px"><!-- 订单id -->订单编号:{{ order.id }}</p>
+                    {% for ordergood in order.ordergoodsmoder_set.all %}
+                    <p style="font-size: 25px"><!-- 数量 -->商品数量:{{ ordergood.goods_num }}</p>
+                        <!--展示商品的名称-->
+                        <li>
+                            <img src="{{ ordergood.goods.productimg }}" alt="">
+                        </li>
+                        <!--处理结束-->
+                    {% endfor %}
+                </a>
+            </li>
+        <!--订单处理结束-->
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'axf:mine' %}">
+    <div style="font-size: 50px">点击返回</div>
+    </a>
+{% endblock %}
